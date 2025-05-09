@@ -29,44 +29,44 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        Toast.makeText(this,"CSE441 - onDestroy",Toast.LENGTH_SHORT).show();
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        Toast.makeText(this,"CSE441 - onStop",Toast.LENGTH_SHORT).show();
-//
-//    }
-//
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        Toast.makeText(this,"CSE441 - onStart",Toast.LENGTH_SHORT).show();
-//
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        Toast.makeText(this,"CSE441 - onPause",Toast.LENGTH_SHORT).show();
-//
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        Toast.makeText(this,"CSE441 - onResume",Toast.LENGTH_SHORT).show();
-//
-//    }
-//
-//    @Override
-//    protected void onRestart() {
-//        super.onRestart();
-//        Toast.makeText(this,"CSE441 - onRestart",Toast.LENGTH_SHORT).show();
-//
-//    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(this,"CSE441 - onDestroy",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(this,"CSE441 - onStop",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(this,"CSE441 - onStart",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this,"CSE441 - onPause",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this,"CSE441 - onResume",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this,"CSE441 - onRestart",Toast.LENGTH_SHORT).show();
+
+    }
 }
