@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9FF811"
+        android:text="Calendar Notes"
+        android:textColor="#F60707"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6E67D"
+        android:gravity="center"
+        android:text="Hom nay: 01/09/2016" />
+
+    <EditText
+        android:id="@+id/editwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTint="#C1BDBD"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:hint="Enter the work here..."
+        android:textColor="#8B7F7F" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txthour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hour"
+            android:textColor="#050505"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edithour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#C4B5B5"
+            android:drawableTint="#544848"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text|textPersonName" />
+
+        <TextView
+            android:id="@+id/txtminute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minute"
+            android:textColor="#090707"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editminute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#BFAFAF"
+            android:drawableTint="#C1BDBD"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text|textPersonName" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Work"
+        android:textAllCaps="false"
+        android:textColor="#E60D0D" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
