@@ -1,4 +1,4 @@
-package com.example.ex223;
+package com.example.Lab24;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.ex223.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -34,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lvTygia;
     TextView txtdate;
-    ArrayList<Tygia> dstygia;
-    MyArrayAdapter myadapter;
+    ArrayList<com.example.Lab24.Tygia> dstygia;
+    com.example.Lab24.MyArrayAdapter myadapter;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         lvTygia = (ListView) findViewById(R.id.lv);
         txtdate = (TextView) findViewById(R.id.txtdate);
         getdate();
-        dstygia = new ArrayList<Tygia>();
-        myadapter = new MyArrayAdapter(MainActivity.this, R.layout.item, dstygia);
+        dstygia = new ArrayList<com.example.Lab24.Tygia>();
+        myadapter = new com.example.Lab24.MyArrayAdapter(MainActivity.this, R.layout.item, dstygia);
         lvTygia.setAdapter(myadapter);
     }
 
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat simpledate = new SimpleDateFormat("dd/MM/yyyy");
         txtdate.setText("Hom nay: " + simpledate.format(currentDate));
     }
-    class TyGiaTask extends AsyncTask<Void, Void, ArrayList<Tygia>>{
+    class TyGiaTask extends AsyncTask<Void, Void, ArrayList<com.example.Lab24.Tygia>>{
 
         @Override
         protected void onPreExecute() {
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(ArrayList<Tygia> tygias) {
+        protected void onPostExecute(ArrayList<com.example.Lab24.Tygia> tygias) {
             super.onPostExecute(tygias);
             myadapter.clear();
             myadapter.addAll(tygias);
@@ -81,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected ArrayList<Tygia> doInBackground(Void... voids) {
-            ArrayList<Tygia> ds = new ArrayList<Tygia>();
+        protected ArrayList<com.example.Lab24.Tygia> doInBackground(Void... voids) {
+            ArrayList<com.example.Lab24.Tygia> ds = new ArrayList<com.example.Lab24.Tygia>();
             try{
                 URL url = new URL("http://dongabank.com.vn/exchange/export");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONArray jsonArray = jsonObject.getJSONArray("items");
                 for(int i=0; i<jsonArray.length(); i++) {
                     JSONObject item = jsonArray.getJSONObject(i);
-                    Tygia tygia = new Tygia();
+                    com.example.Lab24.Tygia tygia = new com.example.Lab24.Tygia();
                     tygia.setType(item.getString("type"));
                     if (item.has("imageurl")) {
                         tygia.setImageurl(item.getString("imageurl"));
